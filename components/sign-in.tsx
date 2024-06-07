@@ -1,4 +1,4 @@
-import { signIn, signOut, auth } from "@/auth.ts";
+import { signIn, signOut, auth } from "@/auth";
 
 export async function SignIn() {
   const session = await auth();
