@@ -1,0 +1,98 @@
+:root {
+  --dark: #0a0b10;
+  --light: #d9d9d9;
+  --border: #543daa;
+}
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0a0b10;
+}
+
+/* Navigation Styling */
+
+nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0b10;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  border-bottom: 1px solid #5a5e6b;
+}
+
+.nav-links * {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #d9d9d9;
+  font-weight: 600 !important;
+}
+
+.nav-link:hover {
+  color: #b9b9b9 !important;
+  border-bottom: 2px solid #b9b9b9;
+}
+
+.nav-button {
+  background-color: #d9d9d9;
+  color: #0a0b10;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.nav-button:hover {
+  background-color: #a3a3a3;
+  cursor: pointer;
+}
+
+.nav-dp {
+  cursor: pointer;
+  border: 2px solid #543daa;
+}
+
+/* Sections */
+
+section {
+  min-height: 400px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Section Curves */
+
+.has-curve {
+  padding-bottom: 149px;
+}
+
+.custom-shape-divider-top-1717856242 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1717856242 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1717856242 .shape-fill {
+  fill: #543daa;
+}

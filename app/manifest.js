@@ -4,8 +4,9 @@ export default function manifest() {
     short_name: "nebulus",
     start_url: ".",
     display: "standalone",
-    background_color: "white",
-    description: "Unleashing Innovation with Nebulus AI.",
+    background_color: "#d9d9d9",
+    description:
+      "Nebulus: Your AI-powered innovation partner. Explore how Nebulus leverages advanced artificial intelligence to drive transformative change across industries, unlocking limitless possibilities and driving growth.",
     icons: [
       {
         src: "/favicon.ico",

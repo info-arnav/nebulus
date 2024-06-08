@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   title: {
@@ -14,10 +19,12 @@ export const metadata = {
   authors: [{ name: "Arnav Gupta", url: "https://www.arnavgupta.net" }],
   creator: "Arnav Gupta",
   publisher: "Arnav Gupta",
-  description: "Unleashing Innovation with Nebulus AI.",
+  description:
+    "Nebulus: Your AI-powered innovation partner. Explore how Nebulus leverages advanced artificial intelligence to drive transformative change across industries, unlocking limitless possibilities and driving growth.",
   openGraph: {
     title: "Nebulus",
-    description: "Unleashing Innovation with Nebulus AI.",
+    description:
+      "Nebulus: Your AI-powered innovation partner. Explore how Nebulus leverages advanced artificial intelligence to drive transformative change across industries, unlocking limitless possibilities and driving growth.",
     url: "https://www.nebulus.in",
     siteName: "Nebulus",
     images: [
@@ -34,7 +41,8 @@ export const metadata = {
   twitter: {
     card: "summary",
     title: "Nebulus",
-    description: "Unleashing Innovation with Nebulus AI.",
+    description:
+      "Nebulus: Your AI-powered innovation partner. Explore how Nebulus leverages advanced artificial intelligence to drive transformative change across industries, unlocking limitless possibilities and driving growth.",
     // siteId: "",
     // creator: "",
     // creatorId: "",
@@ -45,7 +53,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navigation></Navigation>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
