@@ -8,7 +8,13 @@ const orbitron = Orbitron({
 
 export default function NavLink({ title, link }) {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Link
         className={`nav-link ${orbitron.className}`}
         href={link}

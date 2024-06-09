@@ -4,6 +4,12 @@ import { SignIn } from "@/components/nav/sign-in";
 import { SignOut } from "@/components/nav/sign-out";
 import Image from "next/image";
 import Link from "next/link";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export default async function Navigation() {
   const session = await auth();
@@ -79,9 +85,49 @@ export default async function Navigation() {
             }}
           >
             <NavLink link="/" title="Home"></NavLink>
-            <NavLink link="/" title="Tools"></NavLink>
-            <NavLink link="/" title="Docs"></NavLink>
-            <NavLink link="/" title="Pricing"></NavLink>
+            <div
+              className="nav-hover-id-1"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: 0,
+              }}
+            >
+              <div
+                className={`nav-link ${orbitron.className} no-hover`}
+                style={{
+                  textDecoration: "none",
+                  textDecoration: "none",
+                  fontWeight: "500",
+                  fontSize: 15,
+                }}
+              >
+                <p>Tools</p>
+              </div>
+              <div className="nav-dropdown-id-1">
+                <Link href="/tools/AI-SEO-Optimizer">
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                    className="hovered-link-bg"
+                  >
+                    <p style={{ color: "var(--light)", marginBottom: 0 }}>
+                      AI SEO
+                    </p>
+                    <p style={{ color: "var(--light)", fontSize: 12 }}>
+                      Nebulus AI SEO: Boost Rankings and Drive Growth
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <NavLink link="/docs" title="Docs"></NavLink>
+            <NavLink link="/pricing" title="Pricing"></NavLink>
           </div>
           <div
             className="nav-actions"

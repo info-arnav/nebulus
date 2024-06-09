@@ -62,6 +62,38 @@ nav {
   border: 2px solid #543daa;
 }
 
+.no-hover {
+  border-bottom: none !important;
+}
+
+.nav-hover-id-1:hover .nav-dropdown-id-1 {
+  top: 42px;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: block;
+  position: fixed;
+  border: 1px solid var(--light);
+  background-color: #0a0b10d1;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.nav-hover-id-1:hover .nav-dropdown-id-1 * {
+  opacity: 1 !important;
+}
+
+.hovered-link-bg:hover * {
+  color: white !important;
+}
+
+.nav-dropdown-id-1 {
+  display: none;
+  margin: 0px !important;
+}
+
 /* Sections */
 
 section {
@@ -70,10 +102,19 @@ section {
   margin: 0px;
 }
 
+/* Error Pages */
+
+.not-found {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Section Curves */
 
 .has-curve {
-  padding-bottom: 149px;
+  padding-bottom: 148px;
 }
 
 .custom-shape-divider-top-1717856242 {
